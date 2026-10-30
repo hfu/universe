@@ -974,7 +974,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 # /open-questions/practitioner-definition
 - status: open
 - as_of: 2026-10-30
-- 問い: 「すでに OSS を実践している人」は誰を指すか。作り手は、組織の OSS 担当者(A)と、貢献・運営する開発者やメンテナー(B)に仮に分けたが、依頼者(hfu)の意図は確かめていない。個人の開発者か、OSPO を持つ企業か、行政かで、有用な文献の選び方が変わる。
+- 問い: 「すでに OSS を実践している人」は誰を指すか。作り手は、組織の OSS 担当者(A)と、貢献・運営する開発者やメンテナー(B)に仮に分けた。対話の後半で、利用者の一人が B 寄り(本業がソフトウェアでない組織の個人メンテナー)だと述べたため、その読者像を `/scenarios/maintainer-in-non-software-organization` に足した。ほかの読者像(OSPO を持つ企業、行政、大学など)での確認は未了。個人の開発者か、OSPO を持つ企業か、行政かで、有用な文献の選び方が変わる。
 
 # /open-questions/introduced-coverage
 - status: open
@@ -1366,6 +1366,42 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - missing_source_limit: 事例の網羅性を述べた出典はない。
 - freshness: 事例集は更新されうる。
 
+# /scenarios/maintainer-in-non-software-organization
+- status: derived
+- derives_from: /decision-support/practitioner-gains-from-josh, /decision-support/literature-map-for-practitioners, /assets/report-2025, /assets/guidebook-biases
+- source: report-2025, guidebook-biases, talk-osc-kyoto-2024
+- as_of: 2026-10-30
+- 状況: ソフトウェアを本業としない組織に属し、OSS の開発者・メンテナーとして実践している個人。OSS を外部共創の手段として捉えている。(利用者との対話から得た読者像。個人を特定する情報は書かない。)
+- 解釈(IPA が述べたことではない):
+  1. 社内を説得する材料(ガイドブックの処方箋、ワークブックの第2〜4章)は、OSS 担当者向けの資料であり、この読者の主な用途ではない。例外は、所属組織に OSS 活動を業務として認めてもらう必要が出たとき(ガイドブック処方箋4・5)。
+  2. 最も効くのは政策・規制の動向。ソフトウェアを本業としない組織が OSS で外部共創をつなぐときは、公共調達での OSS 優先、重要 OSS への公的支援、EU の CRA の扱いといった公的な動きが、共創の相手や支援の根拠を左右しうる(2025 年度レポートが日本の視点で整理する)。ただし読んだのは要約と 4.3 節のみ。提言の細部は一次資料で確かめる。
+  3. josh から確かな収穫は少ない。①持続可能性と資金調達の論点(レポート 4.3、JSConf JP 2025)、②立ち上げの基礎(OSC 2024 Kyoto の資料)、③業務化の論拠(処方箋4)、④日本の行政 OSS の現状(地図・空間情報分野が中心)。
+  4. 与えてくれないもの(運営手法、メンテナーの負担軽減、健康度の測定、セキュリティの実装)は外部文献で補う(`/decision-support/literature-map-for-practitioners`)。josh の紹介の範囲に収まらない読み物(歴史・文化など)も、実践者は選びうる(`/open-questions/history-culture-literature`)。
+
+# /lessons/reader-profile-changes-answer
+- status: derived
+- derives_from: /scenarios/maintainer-in-non-software-organization, /scenarios/practitioner-using-josh, /organization/readers-and-actors
+- as_of: 2026-10-30
+- 教訓: 「実践者にとって josh から何が得られるか」は、読者像で答えがほとんど変わる。josh は主に組織の担当者を想定した資料群で、同じ「実践者」でも、組織の担当者には説得材料や点検の鏡になり、個人のメンテナーには持続可能性・政策動向・業務化の論拠が中心になる。問いを受けたら、先に読者像(組織の担当者か個人か、本業がソフトウェアかどうか)を確かめるか、場合分けして答える。
+
+# /open-questions/history-culture-literature
+- status: open
+- as_of: 2026-10-30
+- 問い: 実践者が参考にする文献には、手順書や指標でなく、OSS やソフトウェア文化の歴史・思想を扱う読み物(回顧録、歴史書など)もありうる。この kcaim の文献の対応表(`/decision-support/literature-map-for-practitioners`)には、この種類がない。josh が紹介しているのは Raymond『The Cathedral and the Bazaar』(ガイドブック、題名のみ確認)だけ。どの文献をこの種類として載せるか、載せる場合の出典の確かめ方は未決。
+- 次の行動: 実践者が実際に選んだ読み物を、内容を確かめたうえで `/sources/` に足す。題名や記憶だけで載せない。
+
+# /acceptance-tests/maintainer-in-non-software-organization
+- query: ソフトウェアを本業としない組織に属する、OSS の個人メンテナーは、josh から何を得られるか。社内説得は考えるべきか。
+- scope: 範囲内
+- expected: 読者像を先に示す(個人のメンテナー、本業はソフトウェアでない)。社内説得の材料は担当者向けで主な用途ではなく、例外は活動を業務として認めてもらう必要が出たとき(処方箋4・5)と答える。最も効くのは政策・規制の動向(公共調達、重要 OSS への公的支援、CRA)だが、読んだ範囲は要約と 4.3 節に限ると添える。確かな収穫は少ない(持続可能性、立ち上げの基礎、業務化の論拠、日本の行政 OSS の現状)と述べ、与えないもの(運営手法、負担軽減、健康度の測定、セキュリティ実装)は外部文献で補うと述べる。解釈であり IPA の述べたことではないと区別する。
+- requires: /scenarios/maintainer-in-non-software-organization, /decision-support/practitioner-gains-from-josh, /lessons/reader-profile-changes-answer
+- result: pass
+- result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: 未実施(次回の盲検で実行する)
+- missing_ingest: レポートの政策・規制の章(第5〜7章)の本文。
+- missing_source_limit: 本業がソフトウェアでない組織の個人メンテナーを想定した記述は、出典にない。
+- freshness: 政策・規制の動向は変わりやすい。
+
 # /inventory/ingest-and-backlog
 - status: derived
 - derives_from: /sources/hub-library, /acceptance-tests/implications-for-developers, /acceptance-tests/implications-for-community-operators
@@ -1376,7 +1412,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
   - 未取り込み: talk-foss4g-2025-kansai(CC BY-SA のため意図的に未取得)
   - 外部文献(`/sources/ext-*`、22 件。josh が紹介しているもの 9 件、読んだ範囲で紹介されていないもの 12 件、不明 1 件): 一部取り込み 19 件(ページの冒頭・概要のみ)、未取り込み 3 件(LF の貢献 ROI、経産省の事例集、Sovereign Tech Agency)。本文を読み込んだものはない。
   - 概要のみ(出典として未登録): 2024 年度レポート、「思い込み」アンケートのまとめ、行動規範ページ、コラム 2 本、ほか登壇資料 12 件、ワークショップ配布資料 5 点
-- 受け入れテストのバックログ(追加したい問い): AI 時代の OSS ガバナンス(2025 年度レポート第4章)/ EU サイバーレジリエンス法への対応(同レポート提言5)/ インナーソースとは何か(ガイドブック処方箋5・キット)/ ワークショップ第2回・第3回の内容と学び / 日本型 OSS モデルの 3 軸とは / OSS ポリシーの条文の構成 / ハブの更新を追う方法。
+- 受け入れテストのバックログ(追加したい問い): 実践者が選ぶ歴史・文化系の読み物をどう扱うか(`/open-questions/history-culture-literature`)/ AI 時代の OSS ガバナンス(2025 年度レポート第4章)/ EU サイバーレジリエンス法への対応(同レポート提言5)/ インナーソースとは何か(ガイドブック処方箋5・キット)/ ワークショップ第2回・第3回の内容と学び / 日本型 OSS モデルの 3 軸とは / OSS ポリシーの条文の構成 / ハブの更新を追う方法。
 - エージェントが自律的に進められる次の行動:
   1. ガイドブックのあとがきと、処方箋2〜5の要点メモの細部を取り込む(処方箋2〜5の本文は 2 回目で取り込み済み)。
   2. 2025 年度レポートの 4.1・4.2・4.4 と第7章を要約して取り込む(4.3 は取り込み済み)。
