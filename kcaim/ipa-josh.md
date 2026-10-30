@@ -115,7 +115,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - 述べられていること(処方箋3 コスト): OSS をコスト削減でなく投資戦略として捉える。商用ソフトの OpEx に対し、OSS は自社の技術資産への投資(CapEx)に近い。BCP(ベンダー倒産・値上げへの備え)、納品物に含まれる OSS のリスト化(SBOM 等)などのサプライチェーン管理、商用ライセンスが必要なケースにも触れる。
 - 述べられていること(処方箋4 キャリア): OSS 活動を「週末の趣味」でなく「平日の業務」にでき、ポータブル・スキルが身につき、採用広報や自律的な人材の育成にもなる。個人の努力でなく組織文化として取り組むことを促す。
 - 述べられていること(処方箋5 参加): 英語や公開への不安には、まず社内で OSS の手法を実践するインナーソースが「安全な練習場」になる。4 つの原則(Openness、Transparency、Prioritized Mentorship、Voluntary Code Contribution)と、始める 3 ステップ(公開範囲を社内全体に広げる、README を整える、Issue で議論する)を示す。
-- 取り込み状況: はじめに、対象者、目次、処方箋1〜5と要点メモの本文を読んだ(2 回目の取り込み)。あとがき・参照文献は読んでいない。
+- 取り込み状況: はじめに、対象者、目次、処方箋1〜5と要点メモの本文を読んだ(2 回目の取り込み)。あとがきは読んでいない。参照文献(2 件)は読んだ(`/assets/josh-reference-list`)。
 
 # /assets/report-2025
 - status: stated, volatile
@@ -297,6 +297,15 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - 述べられていること(2025 年度の目標): ビルディングブロック型開発に向けたモデル検討と部品化基盤の構築、OSS リテラシーと実践スキルに関する人材育成・教育体制の整備。2026 年度以降は、ガバナンス体制(OSPO)、エコシステムへの還元文化、公共調達での OSS の制度化に本格的に取り組む予定とする。
 - 注意: 目的の記述は IPA の自己説明である。成果の評価ではない。
 
+# /organization/ospo-definition
+- status: verified, stated
+- source: ws-season1-archive, guidebook-biases, kit-repo
+- as_of: 2026-10-30
+- 述べられていること(IPA の資料の定義): OSPO(Open Source Program Office)は、企業や組織が OSS を効果的かつ安全に活用し、管理し、貢献するための専門部署やチーム。単なる管理部門でなく、OSS を通じて社内外とつながり、共創や技術革新を推進する「橋渡し役」でもある(ガイドブックとワークショップ記録の注釈が同趣旨で述べる)。
+- 述べられていること(ワークショップ記録): 「レベル1」とは、企業として OSS がビジネス戦略及びテクノロジー戦略の重要な部分であることを認識し、OSPO を組織する段階に到達すること。
+- 述べられていること(スターターキットの「OSPOとは」): OSPO は、組織が OSS を戦略的に活用し健全に貢献を推進するための枠組みで、形態・位置づけ・活動内容は組織ごとに様々。方針策定、ガイドライン整備、枠組みの提供を主な役割とし、利用ポリシーとライセンスガイドラインの策定、コンプライアンス管理の枠組み、コミュニティとの連携、技術動向の把握と経営層への提言、従業員が貢献しやすい仕組みの整備を統括する、という例を挙げる(テンプレートの文言。[会社名] などの置換部分を含む)。
+- 注意: 国際的な OSPO の定義や、他機関(TODO Group など)の定義との比較は、この kcaim の範囲外。
+
 # /organization/hub-structure
 - status: verified, volatile
 - source: hub-top
@@ -438,7 +447,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 # /open-questions/report-body-unread
 - status: open
 - as_of: 2026-10-30
-- 問い: 2025 年度レポートの第2章以降(企業調査の詳細、持続可能性と資金調達の節 4.3、提言の詳細)と、行政 OSS 調査の本文の内容。エグゼクティブサマリーだけを読んだので、数値の定義や調査の限界を確かめていない。
+- 問い: 2025 年度レポートの未読の節(第2〜3章の企業調査と行政 OSS 調査の詳細、4.1・4.2、第5〜7章の政策動向と提言の詳細)と、行政 OSS 調査の本文の内容。エグゼクティブサマリー(と 4.3 節)だけを読んだので、数値の定義や調査の限界を確かめていない。4.3 節は 2 回目の取り込みで読んだ。
 
 # /open-questions/foss4g-sa-content
 - status: open
@@ -463,6 +472,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /organization/hub-purpose, /organization/readers-and-actors
 - result: pass
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
 - missing_ingest: なし
 - missing_source_limit: ハブの目的に対する成果の評価は出典にない。
 - freshness: ハブの文言は変わりうる。読んだ日(2026-10-30)を添える。
@@ -474,6 +484,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /organization/readers-and-actors
 - result: pass
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
 - missing_ingest: 公開予定のメニューや未取得のコラムにある読者の記述。
 - missing_source_limit: ハブ全体としての読者定義は、読んだ範囲に存在しない。
 - freshness: ハブが更新されると変わる。
@@ -485,6 +496,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /scenarios/developer-first-contribution, /assets/guidebook-biases, /procedures/oss-evaluation-three-stage
 - result: pass
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
 - missing_ingest: ワークブック第3章の PDF 本文。(初回の自己実行ではガイドブック処方箋2〜5の本文が未取り込みで partial だった。2 回目で取り込み済み。)
 - missing_source_limit: 開発者個人を主な読者とする独立した手引きがハブにあるかは、読んだ範囲では確認できない。
 - freshness: ハブが更新されると変わる。
@@ -496,6 +508,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /scenarios/community-operator-reading, /open-questions/community-operator-audience
 - result: partial
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
+- blind_note: 期待(直接扱っていないという事実+間接的な示唆の明記)を満たした。回答者の自己判定は一部答えられた(コラム未読のため)。
 - missing_ingest: コラム 2 本の本文(2 回目の取り込み後も未読)。2025 年度レポート 4.3 は 2 回目で取り込み済み。
 - missing_source_limit: 運営者向けの直接の記述は、読んだ範囲にない。
 - freshness: ハブが更新されると変わる。
@@ -504,10 +518,12 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - query: OSPO とは何か、なぜ必要とされているか。
 - scope: 範囲内
 - expected: OSPO は、組織が OSS を効果的かつ安全に活用・管理・貢献するための専門部署やチーム(ワークショップ記録・ガイドブックの定義)。必要とされる理由として IPA が述べるのは、企業の 8 割以上が OSS ガバナンス体制を持たない(2024 年度調査)ことなど。2025 年度レポートは OSPO 設置率 4.1% を示す(volatile)。
-- requires: /organization/hub-purpose, /assets/report-2025, /assets/ospo-workbook
+- requires: /organization/ospo-definition, /organization/hub-purpose, /assets/report-2025, /assets/ospo-workbook
 - result: pass
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
-- missing_ingest: スターターキットの「OSPOとは」の本文全体。
+- blind_result: partial
+- blind_note: OSPO の定義が kcaim になく、役割と必要性までしか答えられなかった。自己実行の pass は楽観だった。→ `/organization/ospo-definition` を追加して修正(再実行は未実施)。
+- missing_ingest: スターターキットの「OSPOとは」の本文の続き(2 回目の修正で冒頭の定義は `/organization/ospo-definition` に取り込み済み)。
 - missing_source_limit: OSPO の効果を実証したデータは、読んだ範囲にない。
 - freshness: 調査数値は年次で更新される。
 
@@ -518,6 +534,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /procedures/ospo-first-steps, /scenarios/start-ospo, /assets/ospo-starter-kit, /assets/ospo-workbook
 - result: pass
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
 - missing_ingest: ワークブック PDF の演習ページ本文、キットの各条文。
 - missing_source_limit: 組織規模ごとの具体的な手順は出典にない。
 - freshness: キットはドラフト版で更新される。版(commit)を添える。
@@ -529,6 +546,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /decision-support/answer-quality-concern, /procedures/oss-evaluation-three-stage
 - result: pass
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
 - missing_ingest: 処方箋3(コスト)など、経営層向けのほかの論点。
 - missing_source_limit: OSS と商用製品の品質を一般に比較したデータは、読んだ範囲にない。
 - freshness: ガイドブックは Ver.1.0。改訂されうる。
@@ -540,6 +558,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /assets/report-2025, /assets/report-govoss-2025
 - result: volatile
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: volatile
+- blind_note: 数値は答えられたが、回答者は一部答えられたと判定(第2章以降が未読)。
 - missing_ingest: レポート第2〜3章の定義・補正方法、第4章の国際比較。
 - missing_source_limit: 民間企業の国際比較は、読んだ範囲の出典にない(比較は主に行政 OSS)。
 - freshness: 年次で更新される。答えには調査年度を必ず添える。
@@ -551,6 +571,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /assets/report-govoss-2025
 - result: partial
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
+- blind_note: 期待を満たした。自己実行の partial は取り込みの深さ(国別章が未読)を理由にしていた。
 - missing_ingest: 国別の詳細と分析章、Threats to Validity の付録。
 - missing_source_limit: GitHub 以外のプラットフォームや政府系インナーソースは調査の対象外。
 - freshness: 2026-03 時点の調査。リポジトリ数は変わる。
@@ -562,6 +584,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /decision-support/kit-as-policy, /assets/ospo-starter-kit
 - result: volatile
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: volatile
+- blind_note: 内容は期待どおり。ドラフト版の状態に依存すると回答者も指摘した。
 - missing_ingest: 各条文の解説・カスタマイズの観点。
 - missing_source_limit: 自社の法務判断は出典にない。
 - freshness: ドラフト版の状態が変わると答えも変わる。版(commit)と日付を添える。正式版が出たら再確認する。
@@ -573,6 +597,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /procedures/reuse-hub-material, /authorities/license-labels, /scenarios/reuse-in-training
 - result: partial
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
+- blind_note: 期待を満たした。連載・コラムは未確認と正しく答えた。
 - missing_ingest: イベントスライド・ワークショップ配布資料のライセンス表記。連載・コラムは、ページ本文に表記が見当たらない(2 回目の取り込み後)ので、問い合わせか確認が要ると答える。
 - missing_source_limit: 個別の利用が条件を満たすかの法的判断は出典にない。
 - freshness: ライセンス表示は修正されることがある(2026-03-04 の例)。利用の直前に確かめる。
@@ -585,6 +611,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - result: pass
 - boundary: 正しく示せた。可否の結論を述べず、相談先(法務・知財・専門家)と、判断に影響する要素(利用形態)だけを示した。
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
+- blind_note: 境界を示した。可否の結論は述べず、相談先を示した。
 - missing_ingest: ガイドブック処方箋2の後半(ライセンスの探し方・代表的なライセンス)。ただし範囲外なので結論には使わない。
 - missing_source_limit: 個別のライセンスの法的解釈は出典にない。
 - freshness: 変わりにくい。
@@ -596,6 +624,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /scenarios/community-operator-reading, /assets/talks-library, /assets/report-2025
 - result: pass
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
 - missing_ingest: コラム 2 本の本文、レポートのデジタル主権の章。
 - missing_source_limit: 登壇資料は議論の導入であり、IPA の公式な方針ではない。
 - freshness: 講演時点(2024-07、2025-11)の内容。
@@ -607,6 +636,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /organization/hub-structure, /open-questions/coming-soon-menus
 - result: fail
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: fail
+- blind_note: 内容が公開されていないことを正しく答えた(内容そのものは答えられない)。
 - missing_ingest: なし(取り込めるものが存在しない)。
 - missing_source_limit: 出典自体が内容を持たない(公開予定)。
 - freshness: 公開されたら答えが変わる。2026-10-30 時点。
@@ -618,6 +649,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /relationships/inquiry-channel, /traces/org-reform-2026-08-01
 - result: volatile
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: volatile
+- blind_note: 値を答えず、確認方法と変更履歴だけを答えた。期待どおり。
 - missing_ingest: なし
 - missing_source_limit: 将来の問い合わせ先は出典にない。
 - freshness: 確認から 30 日で期限切れ。期限切れのときは、値を答えず確認方法だけを答える。
@@ -629,6 +662,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /traces/library-license-label-fix-2026-03-04, /open-questions/license-fix-detail
 - result: pass
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
 - missing_ingest: 修正前の表示(出典なし)。
 - missing_source_limit: 出典は修正の事実を述べるのみで、中身を述べていない。
 - freshness: 履歴は変わらないが、以降の修正が追加されうる。
@@ -641,6 +675,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - result: pass
 - boundary: 正しく示せた。製品名を挙げず、範囲外とした。
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
+- blind_note: 境界を示した。製品名は挙げなかった。評価フローを参照先として示した。
 - missing_ingest: なし
 - missing_source_limit: 製品の選定は出典の対象外。
 - freshness: 変わりにくい。
@@ -799,7 +835,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - license_checked_at: 2026-10-30
 - fetched_at: 2026-10-30
 - ingest: 一部取り込み
-- notes: エグゼクティブサマリー・目次・第1章冒頭を読んだ。ハブのページ(.../report/report2025/index.html)にも同じ要約がある。要約を載せているので、CC BY の表示として題名・発行者・ライセンス・URL を残す。
+- notes: エグゼクティブサマリー・目次・第1章冒頭・4.3 節を読んだ。ハブのページ(.../report/report2025/index.html)にも同じ要約がある。要約を載せているので、CC BY の表示として題名・発行者・ライセンス・URL を残す。
 
 # /sources/report-govoss-2025
 - status: verified
@@ -1260,6 +1296,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /decision-support/practitioner-gains-from-josh, /scenarios/practitioner-using-josh, /open-questions/practitioner-definition
 - result: pass
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
 - missing_ingest: キットの各条文・ワークブック演習の本文(点検用としての具体的な使い方の裏づけ)。
 - missing_source_limit: 実践者を読者とした josh の記述は出典にない(ハブは読者像を定義していない)。
 - freshness: 数値は年次で更新される。「OSSでつくる・育てる」の公開で変わりうる。
@@ -1271,6 +1308,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /decision-support/literature-map-for-practitioners, /relationships/josh-and-external-literature, /assets/josh-reference-list, /authorities/external-literature-handling
 - result: partial
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
+- blind_note: 紹介/未紹介の区別、読んだ範囲の限定、IPA の推薦でないことの明記がすべて入った。自己実行の partial は外部文献の読みの浅さを理由にしていた。
 - missing_ingest: 各外部文献の本文(多くはページの冒頭のみ)、経産省の事例集の本文、josh の未読部分に載る文献。
 - missing_source_limit: 外部文献の質や実践者への有用性を比較した出典はない。選定は作り手の判断にとどまる。
 - freshness: 外部サイトの状態は変わる(例: CNCF TAG のアーカイブ)。Open Source Pledge の累計額などは volatile。
@@ -1282,6 +1321,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /lessons/external-license-differs, /authorities/external-literature-handling, /procedures/reuse-hub-material
 - result: partial
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
+- blind_note: 確認できたライセンスと未確認を区別した。「josh が紹介している文献の中に転載しやすいものはない」という整理は、期待より踏み込んだが根拠は kcaim にある。
 - missing_ingest: ライセンスを確認できなかった文献のライセンス表示(ページ外の利用条件の確認を含む)。
 - missing_source_limit: 個別の利用が条件を満たすかの法的判断は出典にない。
 - freshness: ライセンス表示は変わりうる。利用の直前に確かめる。
@@ -1293,6 +1334,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /relationships/josh-and-external-literature, /open-questions/introduced-coverage
 - result: pass
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
+- blind_note: 「読んだ範囲に見当たらない」と範囲つきで答えた。
 - missing_ingest: 2025 年度レポート本文の全節、未読の登壇資料。
 - missing_source_limit: 「ある文献が載っていない」ことを、出典の全部を読まずに証明することはできない。
 - freshness: josh の資料が更新されると変わる。
@@ -1304,6 +1347,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /decision-support/literature-map-for-practitioners, /scenarios/community-operator-reading
 - result: partial
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
+- blind_note: 期待を満たした。
 - missing_ingest: 各ガイドの本文、CHAOSS の指標の現行版(サイトが自動取得を拒否)。
 - missing_source_limit: メンテナーに「まず読むべき」順序を決めた出典はない。順序は作り手の仮の提案。
 - freshness: 外部サイトの状態は変わる。
@@ -1315,6 +1360,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - requires: /traces/ws-season1-held, /sources/ext-meti-oss-case-study, /open-questions/meti-case-study
 - result: partial
 - result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- blind_result: pass
+- blind_note: 経産省の事例集が二次情報であることを正しく添えた。
 - missing_ingest: 経産省の事例集の本文、ワークショップ・成果発表会の PDF。
 - missing_source_limit: 事例の網羅性を述べた出典はない。
 - freshness: 事例集は更新されうる。
@@ -1331,8 +1378,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
   - 概要のみ(出典として未登録): 2024 年度レポート、「思い込み」アンケートのまとめ、行動規範ページ、コラム 2 本、ほか登壇資料 12 件、ワークショップ配布資料 5 点
 - 受け入れテストのバックログ(追加したい問い): AI 時代の OSS ガバナンス(2025 年度レポート第4章)/ EU サイバーレジリエンス法への対応(同レポート提言5)/ インナーソースとは何か(ガイドブック処方箋5・キット)/ ワークショップ第2回・第3回の内容と学び / 日本型 OSS モデルの 3 軸とは / OSS ポリシーの条文の構成 / ハブの更新を追う方法。
 - エージェントが自律的に進められる次の行動:
-  1. ガイドブックの処方箋2〜5とあとがきの本文を要約して取り込む(`/assets/guidebook-biases` を更新)。
-  2. 2025 年度レポートの第4章(特に 4.3)と第7章を要約して取り込む。
+  1. ガイドブックのあとがきと、処方箋2〜5の要点メモの細部を取り込む(処方箋2〜5の本文は 2 回目で取り込み済み)。
+  2. 2025 年度レポートの 4.1・4.2・4.4 と第7章を要約して取り込む(4.3 は取り込み済み)。
   3. コラム 2 本と連載 4 回を取得し、ライセンス表記を `/open-questions/column-license` に反映する。
   4. キットの条文 0〜15 と運用テンプレートを読み、`/assets/ospo-starter-kit` に条文ごとの論点を足す。
   5. 受け入れテストを追加し、再実行する。
@@ -1350,8 +1397,22 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - 追記(1 回だけ): 取得済みのファイルで安価に埋められる不足として、ガイドブック処方箋2〜5の本文、2025 年度レポート 4.3、連載・コラムのライセンス表記の有無を取り込んだ。
 - 2 回目(17 件): pass 10 / partial 3 / fail 1 / volatile 3。変わったのは 2 件で、どちらも partial → pass: implications-for-developers, community-sustainability-points。ほかの partial(community-operators, government-oss, reuse-in-training)は、取り込みを増やしても、残る不足(コラム本文、国別の分析章、イベント資料のライセンス)が埋まらないので変えていない。
 - 2 回目で見つかった誤り: 1 回目の `expected` と `/scenarios/developer-first-contribution` に、「ハブに開発者個人向けの手引きは少ない・見当たらない」という書き方があった。ガイドブックが対象者に開発者を明記し、ワークブックに開発者向けの章があるため、「開発者を読者に含めている」が正しい。事実の記述を直し、`expected` を修正した(結果の書き換えではなく、問いの期待の誤りの訂正)。
+- 盲検との比較: `/system-record/blind-run-1` に記録した。自己実行の `pass` が盲検で `partial` になったのは 1 件(OSPO の定義が kcaim になかった)で、自己実行が楽観だった実例である。
 - 偏りの可能性: 出題と採点が同じ主体なので、`pass` は楽観側に偏りうる。`pass` の多くは「この kcaim に書いたことを答えられる」ことの確認で、「この kcaim が重要な問いを網羅している」ことの確認ではない。盲検の実行(別の主体)が必要。範囲外のテスト 2 件は、境界を示す側の期待が自分で書きやすいので、特に偏りやすい。
 - 検査器の WARN: 初回に 18 件。すべて `/sources/*` が `verified` で `source:` を持たないことによるもので、出典オブジェクトは自分が出典なので、検査器側を直した(`/sources/` は対象外)。最終は WARN 0 件。
+
+# /system-record/blind-run-1
+- status: derived
+- derives_from: /system-record/self-run-log
+- as_of: 2026-10-30
+- 実施: 別の主体(別モデルのエージェント。作成者とは別のセッション)が、この kcaim から `/acceptance-tests/*` と `/system-record/self-run-log`・`/system-record/format-observations` を除いた版だけを渡され、ウェブ・記憶・他のファイルを使わずに 23 件の問いに答えた。採点は作成者が、各テストの `expected` に照らして行い、各テストの `blind_result` に記した。
+- 結果(採点後): pass 18 / partial 1 / fail 1 / volatile 3。自己実行(23 件の最終値: pass 12 / partial 7 / fail 1 / volatile 3)と違ったのは 8 件。そのうち 7 件(問い 4・9・11・19・20・22・23)は、自己実行が `partial` で盲検が `pass` だった。理由は、自己実行の `partial` が「期待は満たすが、出典の取り込みが浅い」を含んでいたこと。逆向きは 1 件(5 OSPO とは何か)で、自己実行が `pass`、盲検が `partial` だった。
+- 盲検で見つかった欠陥と対応:
+  1. OSPO の定義が kcaim になかった(問い 5)。`expected` が定義を求めていたのに、定義のオブジェクトを書いていなかった。→ `/organization/ospo-definition` を追加した。
+  2. 取り込み状況の記述が食い違っていた。2025 年度レポート 4.3 とガイドブック処方箋2〜5は、`/assets/` では「読んだ」、`/open-questions/report-body-unread` と `/inventory/ingest-and-backlog` では「未読・未取り込み」だった。→ 後者を直した。
+  3. 外部文献の節が `/sources/` の途中に挿入され、オブジェクトの並びが種別の順でなくなった(回答者の所感)。→ 未対応。形式の観察として記録した。
+- 限界: ①採点者が作成者で、`expected` も作成者が書いた。②問いも作成者が作ったので、kcaim が答えられる問いに偏りうる。③盲検の版にも、問いに近い内容の `/decision-support/*` と `/scenarios/*` が含まれていた(kcaim の内容そのものなので除けない)。④回答者は 1 回だけ実行した。⑤欠陥 1・2 を直した後の再実行は、まだしていない。
+- 次の盲検の提案: 人(hfu)が出す、作成者が見ていない問いを混ぜる。`expected` を回答者に見せずに、複数の主体で採点者を分ける。
 
 # /system-record/format-observations
 - status: derived
@@ -1367,5 +1428,8 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
   7. ファイルの大きさ: 出典 18 件・受け入れテスト 17 件・約 95 オブジェクトで、約 87 KB・約 4.6 万字になった。出典と受け入れテストで約 4 割を占める。1 つのエージェントが常に携行する大きさとして許容かは、盲検の結果を見て判断したい。分割の目安(上限)が要る。
   8. 取り込みの衛生: PDF のテキスト抽出で一部の語に字形の置換が起きた(例:「権利」が別の字に化ける)。数値や固有名詞を写すときの確認が要る。また、CC BY の資料を要約する場合の出典表示は `/sources/` の `notes` に書く運用にした。
   9. 個人名: 資料の書誌には執筆者・登壇者の個人名がある。この kcaim は最小限どころか省略した(所属・機能で記した)。FORMAT で、個人名の扱いの基準を決めたい。
+  11. 取り込み状況の重複(盲検で判明): 取り込みの深さが `/assets/`・`/sources/`・`/open-questions/`・`/inventory/` に分散して書かれ、2 回目の取り込みで更新漏れが出た。1 か所(`/sources/` の `ingest` と `notes`)を正本にして、ほかは参照にする、または `/inventory` を生成物にする案がある。
+  12. `result` の意味の混在(盲検で判明): `partial` が「期待に届かない回答」と「期待は満たすが取り込みが浅い」の両方に使われた。前者を `result`、後者を `ingest_gap` のように分ける案がある。
+  13. 並び順: 後から外部文献を追記すると、種別ごとのまとまりが崩れる。追記用の規則(種別順に挿入する、または種別ごとにファイル末尾でなく節として扱う)が要る。
   10. 日付の食い違い: ハブの複数ページで、同じ出来事(組織改編に伴う問い合わせ先の更新)の日付が一致しない。出典間の食い違いを `/traces` と `/open-questions` に分けて記録する書き方は機能した。
 
