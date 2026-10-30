@@ -6,7 +6,7 @@
 
 | id | title | tier | as_of | scope | license | tests | size |
 |---|---|---|---|---|---|---|---|
-| [ipa-josh](kcaim/ipa-josh.md) | IPA Japan Open Source Hub の公開資料に基づく OSS 導入・参加・OSPO 立ち上げの kcaim | maintained | 2026-10-30 | IPA の Japan Open Source Hub と、そこに掲載された公開資料に基づいて、OSS の導入・参加・組織づくり(特に OSPO の立ち上げ)に関する問いに答える。 | CC0-1.0 | pass 10/partial 3/fail 1/volatile 3 | 87,043 B / 46,351 字 |
+| [ipa-josh](kcaim/ipa-josh.md) | IPA Japan Open Source Hub の公開資料に基づく OSS 導入・参加・OSPO 立ち上げの kcaim | maintained | 2026-10-30 | IPA の Japan Open Source Hub と、そこに掲載された公開資料に基づいて、OSS の導入・参加・組織づくり(特に OSPO の立ち上げ)に関する問いに答える。 | CC0-1.0 | pass 12/partial 7/fail 1/volatile 3 | 127,178 B / 70,688 字 |
 
 ## 外部の kcaim
 

@@ -861,6 +861,464 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
 - ingest: 一部取り込み
 - notes: 目次ページのみ。各回の本文は未取得。
 
+# /authorities/external-literature-handling
+- status: normative
+- authority: この kcaim の作り手(hfu)が定めた運用規則。IPA が定めたものではない。
+- as_of: 2026-10-30
+- 規則: ①josh の資料が紹介している文献(`introduced_by:` に josh の出典 id があるもの)と、紹介していない文献(読んだ範囲に紹介が見当たらないもの)を、必ず区別して示す。②外部文献を勧めることは、IPA がそれを推薦していることを意味しない。選定は作り手(AI)の判断で、人の確認は未了。③外部文献の本文は取り込まず、書誌・ライセンス表記・読んだ範囲・短い要約にとどめる。④外部文献のライセンスは josh の資料と別であり、資料ごとに違う(`/lessons/external-license-differs`)。⑤読んでいない部分の内容を、題名や記憶で補わない。
+- 「紹介されている」の意味: josh の資料のうち、読んだ範囲(ガイドブックの参照文献、2025 年度レポートの参照文献、OSC 2024 Kyoto と JSConf JP 2025 のスライド)に載っているもの。レポート本文の他の節、行政 OSS 調査の参照文献、読んでいない登壇資料に載っているものは確認できていない(`/open-questions/introduced-coverage`)。
+
+# /assets/josh-reference-list
+- status: verified
+- source: guidebook-biases, report-2025, talk-osc-kyoto-2024, talk-jsconf-2025
+- as_of: 2026-10-30
+- 確認した事実(各資料の参照文献・引用として載っているもの。題名と発行主体のみ。本文は取り込まない):
+  - ガイドブック(参照文献 2 件): InnerSource Commons の「InnerSource Principles」/ E. S. Raymond『The Cathedral and the Bazaar』(1999、書籍)。
+  - OSC 2024 Kyoto(引用・参考): Open Source Guides「オープンソースプロジェクトを始めよう」/ Contributor Covenant「コントリビューター行動規範」/ GitHub Docs の CONTRIBUTING.md の例。
+  - JSConf JP 2025(参考): Code for Development「Open-Source Policy Collection」/ 欧州委員会 FOSSEPS(Free and Open Source Software Solutions for European Public Services)。事例として、ドイツの Sovereign Tech Fund による Log4j への投資を挙げる。
+  - 2025 年度レポート(参照文献 約 25 件。分類して列挙): 〔OSPO・貢献〕Linux Foundation「The 2025 State of OSPOs and Open Source Management」、同「ROI for Open Source Software Contribution」/〔資金・持続可能性〕Open Source Pledge、OpenForum Europe の EU-STF、Sovereign Tech Fund の事例研究(Interoperable Europe Portal)、Harvard Business School ワーキングペーパー「The Value of Open Source Software」/〔規制・政策〕欧州委員会の Cyber Resilience Act と「Cyber Resilience Act - Open source」、同「Open-Source Digital Ecosystems」の call for evidence、NIST の大統領令 14028 のページ、OpenForum Europe「Progress and trends in the national open source policies and legal frameworks」、欧州委員会の国別 OSS インテリジェンス報告(ポルトガル、ラトビア)/〔欧州の事例〕シュレスヴィヒ=ホルシュタイン州の発表 2 件、フランスの LaSuite/〔動向〕GitHub Octoverse 2025、Eclipse Foundation のブログ、The New Stack の記事、Open Source Initiative「Open Source AI」、Anthropic「Project Glasswing」/〔IPA 自身〕2024・2025 年度ソフトウェア動向調査、行政 OSS 国際比較調査報告書、LegalTech の推進。
+- 注意: 上記のうち実際に取得して内容を確認したものは、`/sources/ext-*` のうち `introduced_by:` に josh の出典 id があるものだけ。ほかは題名・発行主体の確認にとどまる。
+
+# /relationships/josh-and-external-literature
+- status: verified, derived
+- derives_from: /assets/josh-reference-list, /authorities/external-literature-handling
+- source: guidebook-biases, report-2025, talk-osc-kyoto-2024, talk-jsconf-2025
+- as_of: 2026-10-30
+- 紹介されていて、取得して確かめたもの(`/sources/` に登録): InnerSource Commons の原則(ガイドブック)/ Open Source Guides の「始めよう」・Contributor Covenant(OSC 2024 Kyoto)/ Code for Development の政策集・FOSSEPS(JSConf JP 2025)/ LF の OSPO 調査 2025・LF の貢献 ROI・Open Source Pledge・CRA の OSS ページ(2025 年度レポート)。
+- 紹介されていないもの(読んだ範囲に載っていない。`/sources/` に登録): TODO Group のガイド / CHAOSS の指標 / OpenSSF Scorecard / OpenSSF Best Practices バッジ / OpenChain / REUSE / Apache のプロジェクト成熟度モデル / CNCF TAG Contributor Strategy / Open Source Guides の別の 3 ページ(メンテナー向けベストプラクティス、リーダーシップと組織運営、メトリクス)/ 経産省の OSS 管理手法の事例集 / Sovereign Tech Agency。
+- 注意: 「紹介されていない」は、読んだ範囲に載っていないという意味にとどまる。josh の未読部分が紹介している可能性は残る。Open Source Guides は「始めよう」が紹介されているサイトの別ページを含むので、サイト単位では「紹介されている」とも言える。
+
+# /decision-support/practitioner-gains-from-josh
+- status: derived
+- derives_from: /assets/ospo-starter-kit, /assets/ospo-workbook, /assets/guidebook-biases, /assets/report-2025, /assets/report-govoss-2025, /assets/talks-library, /organization/hub-structure, /traces/ws-season1-held
+- source: kit-page, kit-repo, workbook, guidebook-biases, report-2025, talk-osc-kyoto-2024, talk-jsconf-2025
+- as_of: 2026-10-30
+- 前提: 「すでに実践している人」を、組織で OSS の利用・管理に携わる担当者(A)と、OSS プロジェクトに貢献・運営する開発者やメンテナー(B)に分けて考えた。定義は作り手の仮置きで、確認が要る(`/open-questions/practitioner-definition`)。
+- 解釈(A 組織の担当者が josh から得られること):
+  1. 自社を測る物差し。2025 年度レポートの数値(OSS ポリシー整備率 36.7%、OSPO 設置率 4.1% など。調査年度・対象を添える。volatile)と、ガバナンスが整っていない企業が多いという IPA の認識は、自社の位置を相対化する材料になる。
+  2. 既存の規程を点検するチェックリスト。スターターキット(CC0)の条文 0〜15 と運用テンプレートの構成を、自社の規程と突き合わせると、抜けや偏りが見つかる。ゼロから作る人向けの資料でも、実践者には「監査の視点」として使える。使い方文書の4つの柱(Mission / Incentive / Compliance / Engagement)も点検に使える。
+  3. 社内を説得する言葉。ガイドブックの5つの処方箋と、役割別の要点メモ(経営・法務・財務・人事・組織開発)、ワークブックの第2〜4章(ステークホルダー、開発者、管理者へのメリットの言語化)。日本語で、CC BY で、出典を示せば引用できる。
+  4. 同じ立場の実践の記録。OSPO レベル1構築ワークショップ(シーズン1)の記録と成果発表会は、他社の取り組み方の手がかりになる。ただし、現在参加募集中のイベントはない。
+  5. 政策・規制の動向の把握。2025 年度レポートは、デジタル主権、EU サイバーレジリエンス法(CRA)、重要 OSS への公的支援を、日本の企業の視点で整理している。
+- 解釈(B 貢献・運営する開発者やメンテナーが josh から得られること): 得られるものは A より少ない。①OSC 2024 Kyoto の資料が、コミュニティを持続可能にする基礎(ライセンス、README、コントリビュートガイドライン、行動規範を備える)を示す。②持続可能性と資金調達の動向(2025 年度レポート 4.3、JSConf JP 2025)が、支援を考える際の外部の情報になる。③ガイドブック処方箋4が、OSS 活動を雇用主に業務として認めてもらう論拠になりうる。
+- 限界(josh が実践者に与えないもの): 読んだ範囲に、プロジェクト運営の具体的な手法(リリース管理、メンテナーの負担軽減、指標による健康度の測定)、セキュリティの実装(依存関係やビルドの強化、脆弱性対応の手順)、ライセンスコンプライアンスの運用ツールの解説はほとんどない。ハブの「OSSでつくる・育てる」は公開予定で、実践者に向く内容が入るかは不明(`/open-questions/coming-soon-menus`)。
+- 注意: 以上は作り手の解釈で、IPA が実践者向けにそう述べているわけではない。
+
+# /decision-support/literature-map-for-practitioners
+- status: derived
+- derives_from: /relationships/josh-and-external-literature, /decision-support/practitioner-gains-from-josh, /authorities/external-literature-handling
+- source: ext-lf-state-of-ospos-2025, ext-lf-roi-contribution, ext-open-source-pledge, ext-innersource-commons, ext-osg-starting-a-project, ext-contributor-covenant, ext-c4d-oss-policies, ext-fosseps, ext-eu-cra-open-source, ext-todo-guides, ext-chaoss-metrics, ext-openssf-scorecard, ext-openssf-best-practices-badge, ext-openchain, ext-reuse, ext-asf-maturity-model, ext-cncf-tag-contributor-strategy, ext-osg-best-practices, ext-osg-leadership, ext-osg-metrics, ext-meti-oss-case-study, ext-sovereign-tech-agency
+- as_of: 2026-10-30
+- 注意: 選定は作り手(AI)の判断で、人の確認は未了。各項目の読んだ深さは `/sources/ext-*` の `ingest` と `notes` を見る。題名や要約が良さそうに見えることと、内容が良いことは別。
+- 解釈(需要別の対応表。〔紹介〕は josh が紹介している、〔未紹介〕は読んだ範囲に載っていない):
+  1. OSPO を運営・測定する: 〔紹介〕LF「2025 State of OSPOs」(OSPO の役割が準拠中心から戦略的ガバナンスに移りつつあるなどの調査。数値の根拠は未読)。〔未紹介〕TODO Group のガイド集(OSPO の作り方、戦略、成功の測り方、従業員の関与、採用などの題名のガイド。CC BY-SA 4.0)。josh のキットが「作る」側の雛形なのに対し、運用・測定側を補う。
+  2. ライセンスコンプライアンスを回す: 〔未紹介〕OpenChain(ライセンス遵守の国際規格 ISO/IEC 5230 とセキュリティ保証の ISO/IEC 18974 を維持する LF の取り組み)、REUSE(ファイル単位でライセンスと著作権を機械可読に表示する FSFE の推奨)。josh のガイドブックは配布や SaaS の区別などの考え方を述べるが、運用の仕組みは扱わない。
+  3. セキュリティとサプライチェーン: 〔紹介〕EU の CRA の OSS ページ(OSS に対する特別な扱いを説明するページ。条文の解釈は未確認)。〔未紹介〕OpenSSF Scorecard(OSS のリスクのある慣行を自動評価)、OpenSSF Best Practices バッジ(自己認証のベストプラクティス基準)。josh のガイドブックの3段階評価の実装手段になりうる。
+  4. プロジェクトを運営する(B): 〔紹介〕Open Source Guides「始めよう」、Contributor Covenant。〔未紹介〕Open Source Guides の「メンテナーの為のベストプラクティス」「リーダーシップと組織運営」「メトリクス」、Apache のプロジェクト成熟度モデル(自己評価の枠組み)、CHAOSS の指標(コミュニティの健康度を測る。リポジトリは MIT)、CNCF の Contributor Strategy(メンテナーとの関係やガバナンスを扱う TAG。ただしリポジトリは 2025-11-03 にアーカイブ済み)。
+  5. 社内で OSS の作法を練習する: 〔紹介〕InnerSource Commons の原則(ガイドブック処方箋5が参照)。
+  6. 資金・持続可能性: 〔紹介〕Open Source Pledge(企業が開発者あたり年額を支払う約束)、LF「貢献の ROI」、FOSSEPS(欧州の公共機関の重要 OSS の調査)。〔未紹介〕Sovereign Tech Agency(josh は Sovereign Tech Fund の事例を引くが、同一組織かは未確認)。
+  7. 政策の国際比較: 〔紹介〕Code for Development の政策集(ただし内容は CC BY-NC-ND 4.0 で、個別の政策文書は元のライセンス)。
+  8. 日本の企業の実践事例: 〔未紹介〕経産省「OSSの利活用及びそのセキュリティ確保に向けた管理手法に関する事例集」(2021 年公開、2022 年 5 月に拡充。検索結果の記述では約 20 社の事例。経産省のサイトが自動取得を拒否したため、本文は未確認)。josh のキットとワークショップは日本企業の実務を扱うので、事例集は補完しうる。
+- 読む順の目安(作り手の仮の提案): A は、josh のキットで自社の規程を点検 → TODO Group のガイドで運営・測定を補う → OpenChain/REUSE で運用の仕組みを調べる → 経産省の事例集(要確認)で他社と比べる。B は、josh の OSC 2024 資料 → Open Source Guides の3ページ → CHAOSS/Scorecard で自分のプロジェクトを測る。
+
+# /scenarios/practitioner-using-josh
+- status: derived
+- derives_from: /decision-support/practitioner-gains-from-josh, /decision-support/literature-map-for-practitioners
+- as_of: 2026-10-30
+- 状況: すでに OSS を実践している人(組織の OSS 担当者、または貢献・運営している開発者)が、josh を自分の役に立てたい。
+- 解釈: 入門や立ち上げの資料としてでなく、「自分の現状を点検する鏡」と「社内外を説得する根拠」として josh を使い、運営・測定・セキュリティの具体策は `/decision-support/literature-map-for-practitioners` の外部文献で補う。
+
+# /lessons/external-license-differs
+- status: derived
+- derives_from: /authorities/external-literature-handling, /authorities/license-labels
+- source: ext-c4d-oss-policies, ext-lf-state-of-ospos-2025, ext-todo-guides, ext-openchain, ext-reuse
+- as_of: 2026-10-30
+- 教訓: josh が勧める外部文献のライセンスは、josh の資料(主に CC BY / CC0)より厳しいものがありうる。Code for Development の政策集は CC BY-NC-ND 4.0、LF のレポートのページは「All rights reserved」の表示、TODO Group のガイドは CC BY-SA 4.0。引用や転載の前に、資料ごとに確かめる。
+
+# /open-questions/practitioner-definition
+- status: open
+- as_of: 2026-10-30
+- 問い: 「すでに OSS を実践している人」は誰を指すか。作り手は、組織の OSS 担当者(A)と、貢献・運営する開発者やメンテナー(B)に仮に分けたが、依頼者(hfu)の意図は確かめていない。個人の開発者か、OSPO を持つ企業か、行政かで、有用な文献の選び方が変わる。
+
+# /open-questions/introduced-coverage
+- status: open
+- as_of: 2026-10-30
+- 問い: josh が紹介している文献の全体像。読んだのは、ガイドブックの参照文献、2025 年度レポートの参照文献、2 つの登壇資料だけ。レポートの本文、行政 OSS 調査の参照文献、2024 年度レポート、未読の登壇資料に載る文献は確認していない。
+
+# /open-questions/external-literature-depth
+- status: open
+- as_of: 2026-10-30
+- 問い: `/sources/ext-*` の多くは、ページの冒頭や概要を読んだだけ(`ingest: 一部取り込み` か `未取り込み`)。各文献の中身が、実践者にとって実際にどの程度役に立つかは、まだ確かめていない。
+
+# /open-questions/sovereign-tech-naming
+- status: open
+- as_of: 2026-10-30
+- 問い: josh の資料が引く「Sovereign Tech Fund」と、現在のサイトの「Sovereign Tech Agency」は、同一の組織か、名称が変わったのか。サイトのトップページを読んだだけで、関係を述べた記述は確認していない。
+
+# /open-questions/meti-case-study
+- status: open
+- as_of: 2026-10-30
+- 問い: 経産省の OSS 管理手法の事例集の内容とライセンス。経産省のサイトが自動取得に 403 を返し、本文を取得できなかった。存在と概要は検索結果の記述(二次情報)による。
+
+# /traces/cncf-tag-archived
+- status: verified, volatile
+- source: ext-cncf-tag-contributor-strategy
+- as_of: 2026-10-30
+- freshness: リポジトリの状態は変わりうる。使う前に確かめる。
+- 事実: cncf/tag-contributor-strategy の GitHub リポジトリは、2025-11-03 にオーナーによってアーカイブ(読み取り専用)にされたと表示されている。内容の後継の所在は読んだ範囲に見当たらない。
+
+# /sources/ext-innersource-commons
+- status: verified
+- title: InnerSource Principles(InnerSource Commons、学習パスの導入)
+- issuer: InnerSource Commons Foundation
+- published: 不明
+- url: https://innersourcecommons.org/learn/learning-path/introduction/05/
+- license: サイトは「別途表示がない限り CC-BY-SA」と表示
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: guidebook-biases
+- notes: ページ冒頭(4 つの原則がある旨)のみ読んだ。ガイドブックが参照文献として挙げる。
+
+# /sources/ext-osg-starting-a-project
+- status: verified
+- title: オープンソースプロジェクトを始めよう(Open Source Guides)
+- issuer: Open Source Guides(GitHub が支援するガイド集)
+- published: 不明
+- url: https://opensource.guide/ja/starting-a-project/
+- license: ページから確認できず
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: talk-osc-kyoto-2024
+- notes: 立ち上げ前のチェックリスト(LICENSE、README・CONTRIBUTING・CODE_OF_CONDUCT などの基本文書、名前、イシューの整理)がある。全文は読んでいない。
+
+# /sources/ext-contributor-covenant
+- status: verified
+- title: Contributor Covenant 行動規範 2.1(日本語)
+- issuer: Contributor Covenant
+- published: 不明(バージョン 2.1)
+- url: https://www.contributor-covenant.org/ja/version/2/1/code_of_conduct/
+- license: ページの本文から確認できず(OSC 2024 Kyoto の資料は、ほとんどが CC BY 4.0 と述べる)
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: talk-osc-kyoto-2024
+- notes: 行動規範の雛形。違反時の対応段階(コミュニティへの影響ガイドライン)を含むことを確認した。
+
+# /sources/ext-c4d-oss-policies
+- status: verified
+- title: Open Source Policy Documentation(Code for Development「Open-Source Policy Collection」)
+- issuer: Code for Development(米州開発銀行のオープンソースイニシアチブとして JSConf JP 2025 の資料が紹介)
+- published: 不明
+- url: https://el-bid.github.io/OSS_policies/
+- license: CC BY-NC-ND 4.0(リポジトリの内容。個々の政府の政策文書は元のライセンスを保持する、とページが述べる)
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: talk-jsconf-2025
+- notes: 政策の種類別に整理した政策文書のサイト。JSConf JP 2025 は、この分類(9 類型)を引く。
+
+# /sources/ext-fosseps
+- status: verified
+- title: FOSSEPS - Free and Open Source Software Solutions for European Public Services
+- issuer: 欧州委員会 DIGIT(Interoperable Europe Portal)
+- published: 不明
+- url: https://interoperable-europe.ec.europa.eu/collection/fosseps
+- license: 確認していない
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: talk-jsconf-2025
+- notes: 欧州の公共機関の OSS を集合的な資産として管理・保護する必要を述べる紹介ページ。調査の中身(JSConf JP 2025 が述べる、重要 OSS の特定とバスファクターの課題)の一次資料は未読。
+
+# /sources/ext-lf-state-of-ospos-2025
+- status: verified
+- title: The 2025 State of OSPOs and Open Source Management
+- issuer: LF Research(The Linux Foundation)
+- published: 不明(ページに日付の表示なし)
+- url: https://www.linuxfoundation.org/research/ospo-2025
+- license: ページに利用許諾の表示なし。フッターは All rights reserved の著作権表示
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: report-2025
+- notes: ページの概要を読んだ(要約ツール経由)。OSPO が準拠中心から戦略的ガバナンスに移りつつあること、OSPO を持つ組織で上流貢献が多いことなどの調査結果が述べられている。調査の方法・標本は、ページには見当たらず、PDF は未取得。
+
+# /sources/ext-lf-roi-contribution
+- status: verified
+- title: ROI for Open Source Software Contribution
+- issuer: LF Research(The Linux Foundation)
+- published: 不明(2025 年度レポートは 2026-02 の公表として引く)
+- url: https://www.linuxfoundation.org/research/contribution-roi
+- license: 確認していない
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 未取り込み
+- introduced_by: report-2025
+- notes: ページの存在(HTTP 200)とタイトルを確認しただけ。本文は読んでいない。
+
+# /sources/ext-open-source-pledge
+- status: verified
+- title: Open Source Pledge
+- issuer: Open Source Pledge
+- published: 不明
+- url: https://opensourcepledge.com/
+- license: 確認していない
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: report-2025
+- notes: トップページを読んだ。企業がメンテナーに直接現金を拠出する取り組みで、累計の拠出額が表示されている(2026-10-30 時点で約 920 万ドルとの表示。2025 年度レポートの「約 700 万ドル超(2026 年初時点)」と時点が違う。volatile)。
+
+# /sources/ext-eu-cra-open-source
+- status: verified
+- title: Cyber Resilience Act - Open source
+- issuer: 欧州委員会(Shaping Europe's digital future)
+- published: 不明(2025 年度レポートは 2026-01-12 付として引く)
+- url: https://digital-strategy.ec.europa.eu/en/policies/cra-open-source
+- license: 確認していない
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: report-2025
+- notes: 冒頭(CRA は FOSS に対して特別な扱いをとる、とする説明)のみ読んだ。法的な解釈は行わない。
+
+# /sources/ext-todo-guides
+- status: verified
+- title: Guides and Resources(TODO Group の OSPO ガイド集)
+- issuer: TODO Group(The Linux Foundation 傘下のコミュニティ)
+- published: 不明
+- url: https://todogroup.org/resources/guides/
+- license: OSPO ガイドは CC BY-SA 4.0、ページのフッターは別途表示がない限り CC BY 4.0(ページの表示を要約ツール経由で確認)
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: なし(読んだ範囲では)
+- notes: ガイド一覧のページを読んだ。OSPO の FAQ、作り方、戦略、成功の測り方、コード利用、公開(アウトバウンド)、ツール、従業員の関与、キャリア、採用などの題名がある。各ガイドの本文は未読。
+
+# /sources/ext-chaoss-metrics
+- status: verified
+- title: CHAOSS Metrics(GitHub リポジトリ)
+- issuer: CHAOSS Project(The Linux Foundation 傘下)
+- published: 不明
+- url: https://github.com/chaoss/metrics
+- license: MIT(リポジトリの LICENSE を確認)
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: なし(読んだ範囲では)
+- notes: README を読んだ。コミュニティの健康度の指標を、ワーキンググループ(共通、多様性と包摂、進化、価値、リスク)が作る。現行版は chaoss.community/metrics にあるとされるが、そのサイトは自動取得に 403 を返したため確認できていない。
+
+# /sources/ext-openssf-scorecard
+- status: verified
+- title: OpenSSF Scorecard
+- issuer: Open Source Security Foundation
+- published: 不明
+- url: https://scorecard.dev/
+- license: 確認していない
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: なし(読んだ範囲では)
+- notes: トップページを読んだ。OSS のリスクのある慣行を評価する仕組みで、GitHub Action で自動実行するか、コマンドラインで他者のプロジェクトを手動評価できると説明している。個々の検査項目は未読。
+
+# /sources/ext-openssf-best-practices-badge
+- status: verified
+- title: OpenSSF Best Practices Badge Program
+- issuer: Open Source Security Foundation
+- published: 不明
+- url: https://www.bestpractices.dev/en
+- license: ページ内に CC-BY-3.0 の表示があるが、何に対するものかは確認していない
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: なし(読んだ範囲では)
+- notes: プロジェクトが無償で自己認証し、ベストプラクティスに従っていることを示すバッジ制度と説明している。基準の本文は未読。
+
+# /sources/ext-openchain
+- status: verified
+- title: OpenChain
+- issuer: OpenChain Project(The Linux Foundation)
+- published: 不明
+- url: https://openchainproject.org/
+- license: 仕様は CC-BY-4.0、参考資料は CC0(サイトフッターの表示)
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: なし(読んだ範囲では)
+- notes: トップページを読んだ。OSS のライセンス遵守の規格 ISO/IEC 5230 とセキュリティ保証の規格 ISO/IEC 18974 を維持する取り組みと説明している(要約ツール経由)。規格の本文は未読。
+
+# /sources/ext-reuse
+- status: verified
+- title: REUSE - Make licensing easy for everyone
+- issuer: Free Software Foundation Europe(REUSE SOFTWARE)
+- published: 不明
+- url: https://reuse.software/
+- license: サイトは別途表示がない限り CC BY-SA 4.0
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: なし(読んだ範囲では)
+- notes: ライセンスの選択と提供、ファイルごとの著作権・ライセンス情報の付与、準拠の確認、という3段階の推奨を述べる。仕様の本文は未読。
+
+# /sources/ext-asf-maturity-model
+- status: verified
+- title: A Maturity Model for Apache Projects
+- issuer: The Apache Software Foundation(Community Development)
+- published: 不明
+- url: https://community.apache.org/apache-way/apache-project-maturity-model.html
+- license: 確認していない
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: なし(読んだ範囲では)
+- notes: プロジェクトのコミュニティとコードベースの成熟度を評価する枠組みの提案。ASF 固有だが多くの要素は他のプロジェクトにも当てはまる、と冒頭が述べる。評価項目の本文は未読。
+
+# /sources/ext-cncf-tag-contributor-strategy
+- status: verified
+- title: CNCF Technical Advisory Group on Contributor Strategy(GitHub リポジトリ)
+- issuer: CNCF
+- published: 不明
+- url: https://github.com/cncf/tag-contributor-strategy
+- license: リポジトリにライセンス表示があるが(Apache-2.0 とみられる)、対象は確認していない
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: なし(読んだ範囲では)
+- notes: メンテナーとの関係、コントリビューターの育成、ガバナンスなどを扱う TAG と説明している。2025-11-03 にアーカイブされた(`/traces/cncf-tag-archived`)。内容は未読。
+
+# /sources/ext-osg-best-practices
+- status: verified
+- title: メンテナーの為のベストプラクティス(Open Source Guides)
+- issuer: Open Source Guides
+- published: 不明
+- url: https://opensource.guide/ja/best-practices/
+- license: ページから確認できず
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: なし(読んだ範囲では。同サイトの別ページ「始めよう」は紹介されている)
+- notes: 冒頭を読んだ。プロセスのドキュメント化、コミュニティの活用など、メンテナーの負担を軽くする方法を述べる。
+
+# /sources/ext-osg-leadership
+- status: verified
+- title: リーダーシップと組織運営(Open Source Guides)
+- issuer: Open Source Guides
+- published: 不明
+- url: https://opensource.guide/ja/leadership-and-governance/
+- license: ページから確認できず
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: なし(読んだ範囲では。同サイトの別ページ「始めよう」は紹介されている)
+- notes: 冒頭を読んだ。成長するプロジェクトの運営、役割(メンテナー、コントリビューター、コミッター)、コミット権限の与え方などを扱う。
+
+# /sources/ext-osg-metrics
+- status: verified
+- title: メトリクス(Open Source Guides)
+- issuer: Open Source Guides
+- published: 不明
+- url: https://opensource.guide/ja/metrics/
+- license: ページから確認できず
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 一部取り込み
+- introduced_by: なし(読んだ範囲では。同サイトの別ページ「始めよう」は紹介されている)
+- notes: 冒頭を読んだ。データに基づく意思決定、利用状況の把握、スポンサーや補助金の獲得に計測を使う、といった点を述べる。
+
+# /sources/ext-meti-oss-case-study
+- status: verified
+- title: OSSの利活用及びそのセキュリティ確保に向けた管理手法に関する事例集
+- issuer: 経済産業省
+- published: 2021-04-21 公開、2022-05-10 拡充(検索結果の記述による。二次情報)
+- url: https://www.meti.go.jp/policy/netsecurity/wg1/ossjirei_20220510.pdf
+- license: 確認できず
+- license_checked_at: 2026-10-30
+- fetched_at: 未取得(自動取得が 403 を返した)
+- ingest: 未取り込み
+- introduced_by: なし(読んだ範囲では)
+- notes: 存在と概要は、検索結果の記述(約 20 社の事例、PDF 約 135 ページ、ソフトウェア管理手法等検討タスクフォースの議論が出発点)による。本文は確認していない。URL は検索結果が示したもので、直接開いて確かめていない。→ `/open-questions/meti-case-study`
+
+# /sources/ext-sovereign-tech-agency
+- status: verified
+- title: Sovereign Tech Agency
+- issuer: Sovereign Tech Agency
+- published: 不明
+- url: https://www.sovereign.tech/
+- license: 確認していない
+- license_checked_at: 2026-10-30
+- fetched_at: 2026-10-30
+- ingest: 未取り込み
+- introduced_by: 不明(josh は「Sovereign Tech Fund」を引く。同一組織かは未確認)
+- notes: トップページのタイトルと標語(21 世紀のインフラへの投資)のみ。→ `/open-questions/sovereign-tech-naming`
+
+# /acceptance-tests/practitioner-gains-from-josh
+- query: OSS をすでに実践している人にとって、josh から得られることは何か。
+- scope: 範囲内
+- expected: 「実践者」の仮定(組織の担当者と、貢献・運営する開発者)を示したうえで、組織の担当者には、自社を測る物差し(2025 年度レポートの数値、volatile)、既存規程の点検用チェックリスト(キット)、社内説得の言葉(ガイドブック、ワークブック)、他社の実践の記録(ワークショップ)、政策・規制の動向を挙げる。開発者・メンテナーには得られるものが少ないこと(OSC 2024 の基礎、資金の動向、業務化の論拠)と、josh が与えないもの(運営手法、セキュリティの実装、コンプライアンス運用)を述べる。作り手の解釈で、IPA の述べたことではないと区別する。
+- requires: /decision-support/practitioner-gains-from-josh, /scenarios/practitioner-using-josh, /open-questions/practitioner-definition
+- result: pass
+- result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- missing_ingest: キットの各条文・ワークブック演習の本文(点検用としての具体的な使い方の裏づけ)。
+- missing_source_limit: 実践者を読者とした josh の記述は出典にない(ハブは読者像を定義していない)。
+- freshness: 数値は年次で更新される。「OSSでつくる・育てる」の公開で変わりうる。
+
+# /acceptance-tests/practitioner-other-references
+- query: OSS をすでに実践している人は、josh 以外の何を参考にするべきか。josh が紹介している文献と、紹介していない文献の両方から示してほしい。
+- scope: 範囲内
+- expected: 紹介されている文献と紹介されていない文献を区別して示す(読んだ範囲の限定つき)。紹介されている例: LF の OSPO 調査 2025、InnerSource Commons、Open Source Guides「始めよう」、Contributor Covenant、Code for Development、FOSSEPS、Open Source Pledge、CRA の OSS ページ。紹介されていない例: TODO Group のガイド、OpenChain、REUSE、OpenSSF Scorecard・Best Practices バッジ、CHAOSS、Apache の成熟度モデル、Open Source Guides の別ページ、経産省の事例集(未確認と明示)。需要別(OSPO の運営、コンプライアンス、セキュリティ、プロジェクト運営、資金、日本の事例)に対応づける。選定が作り手の判断で、IPA の推薦ではなく、人の確認が未了であることを添える。
+- requires: /decision-support/literature-map-for-practitioners, /relationships/josh-and-external-literature, /assets/josh-reference-list, /authorities/external-literature-handling
+- result: partial
+- result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- missing_ingest: 各外部文献の本文(多くはページの冒頭のみ)、経産省の事例集の本文、josh の未読部分に載る文献。
+- missing_source_limit: 外部文献の質や実践者への有用性を比較した出典はない。選定は作り手の判断にとどまる。
+- freshness: 外部サイトの状態は変わる(例: CNCF TAG のアーカイブ)。Open Source Pledge の累計額などは volatile。
+
+# /acceptance-tests/reuse-license-of-recommended-literature
+- query: josh が紹介している・勧めている外部文献のうち、自社の研修資料に転載しやすいのはどれか。
+- scope: 範囲内
+- expected: 文献ごとにライセンスが違うので一括では答えられない。確認できたものとして、OpenChain の仕様は CC-BY-4.0、参考資料は CC0、TODO Group のガイドは CC BY-SA 4.0、REUSE と InnerSource Commons のサイトは CC BY-SA 系、CHAOSS の指標のリポジトリは MIT、Code for Development の内容は CC BY-NC-ND 4.0(転載・改変に不向き)、LF の OSPO 調査のページは All rights reserved の表示。ライセンスを確認できなかったもの(Open Source Guides、Scorecard、ASF、CNCF、経産省)は未確認と答える。法的判断ではない。
+- requires: /lessons/external-license-differs, /authorities/external-literature-handling, /procedures/reuse-hub-material
+- result: partial
+- result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- missing_ingest: ライセンスを確認できなかった文献のライセンス表示(ページ外の利用条件の確認を含む)。
+- missing_source_limit: 個別の利用が条件を満たすかの法的判断は出典にない。
+- freshness: ライセンス表示は変わりうる。利用の直前に確かめる。
+
+# /acceptance-tests/is-scorecard-introduced-by-josh
+- query: OpenSSF Scorecard は、josh が紹介している文献か。
+- scope: 範囲内
+- expected: 読んだ範囲(ガイドブックと 2025 年度レポートの参照文献、2 つの登壇資料)には載っていない。ただし josh の未読部分(レポート本文、他の資料)に載っている可能性は残るので、「紹介されていない」と断定せず、「読んだ範囲に見当たらない」と答える。
+- requires: /relationships/josh-and-external-literature, /open-questions/introduced-coverage
+- result: pass
+- result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- missing_ingest: 2025 年度レポート本文の全節、未読の登壇資料。
+- missing_source_limit: 「ある文献が載っていない」ことを、出典の全部を読まずに証明することはできない。
+- freshness: josh の資料が更新されると変わる。
+
+# /acceptance-tests/maintainer-starting-reading-list
+- query: OSS プロジェクトを運営しているメンテナーが、まず読むべきものは何か。
+- scope: 範囲内
+- expected: josh では OSC 2024 Kyoto の資料(基本文書と行動規範の整備)が出発点。josh の外では、Open Source Guides の「メンテナーの為のベストプラクティス」「リーダーシップと組織運営」「メトリクス」、Contributor Covenant(josh が紹介)、CHAOSS・Apache の成熟度モデル・OpenSSF のバッジや Scorecard を、自己点検に使える候補として示す。josh の資料はメンテナー向けに書かれていないこと、CNCF の Contributor Strategy がアーカイブ済みであることも添える。
+- requires: /decision-support/literature-map-for-practitioners, /scenarios/community-operator-reading
+- result: partial
+- result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- missing_ingest: 各ガイドの本文、CHAOSS の指標の現行版(サイトが自動取得を拒否)。
+- missing_source_limit: メンテナーに「まず読むべき」順序を決めた出典はない。順序は作り手の仮の提案。
+- freshness: 外部サイトの状態は変わる。
+
+# /acceptance-tests/japan-company-practice-cases
+- query: 日本の企業の OSS 管理の実践事例は、どこで読めるか。
+- scope: 範囲内
+- expected: josh では、OSPO レベル1構築ワークショップの記録と成果発表会の資料(ゲスト講師は企業の OSPO 担当者だが、個人名は kcaim に書かない)。josh の外では、経産省の事例集(2021 年公開、2022 年拡充、約 20 社とされる)があるが、本文は取得できておらず、内容は未確認と明示する。
+- requires: /traces/ws-season1-held, /sources/ext-meti-oss-case-study, /open-questions/meti-case-study
+- result: partial
+- result_by: 作成者の自己実行。kcaim 全体と取得済みメモを参照
+- missing_ingest: 経産省の事例集の本文、ワークショップ・成果発表会の PDF。
+- missing_source_limit: 事例の網羅性を述べた出典はない。
+- freshness: 事例集は更新されうる。
+
 # /inventory/ingest-and-backlog
 - status: derived
 - derives_from: /sources/hub-library, /acceptance-tests/implications-for-developers, /acceptance-tests/implications-for-community-operators
@@ -869,6 +1327,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
   - 取り込み済み: hub-top, hub-about, hub-learn, hub-events, hub-report, hub-adopt, hub-library, kit-page, ws-season1-archive, talk-jsconf-2025, talk-osc-kyoto-2024
   - 一部取り込み: kit-repo(条文 0〜15 と多くの運用テンプレートが未読), workbook(PDF 演習本文が未読), guidebook-biases, report-2025(第2章以降が未読), report-govoss-2025(本文が未読), series-economic-value(目次のみ)
   - 未取り込み: talk-foss4g-2025-kansai(CC BY-SA のため意図的に未取得)
+  - 外部文献(`/sources/ext-*`、22 件。josh が紹介しているもの 9 件、読んだ範囲で紹介されていないもの 12 件、不明 1 件): 一部取り込み 19 件(ページの冒頭・概要のみ)、未取り込み 3 件(LF の貢献 ROI、経産省の事例集、Sovereign Tech Agency)。本文を読み込んだものはない。
   - 概要のみ(出典として未登録): 2024 年度レポート、「思い込み」アンケートのまとめ、行動規範ページ、コラム 2 本、ほか登壇資料 12 件、ワークショップ配布資料 5 点
 - 受け入れテストのバックログ(追加したい問い): AI 時代の OSS ガバナンス(2025 年度レポート第4章)/ EU サイバーレジリエンス法への対応(同レポート提言5)/ インナーソースとは何か(ガイドブック処方箋5・キット)/ ワークショップ第2回・第3回の内容と学び / 日本型 OSS モデルの 3 軸とは / OSS ポリシーの条文の構成 / ハブの更新を追う方法。
 - エージェントが自律的に進められる次の行動:
@@ -882,7 +1341,7 @@ disclaimer: 個人(hfu)による公開資料の整理であり、IPA の公式�
   2. 盲検の実行(別の主体が、この kcaim だけを持って受け入れテストに答える)。
   3. 組織改編の対応関係(`/open-questions/org-mapping`)など、ハブの外の確認や IPA への問い合わせが要る事項。
   4. GitHub への公開の判断と手順(未実施)。
-- `volatile` なオブジェクト: /assets/ospo-starter-kit, /assets/report-2025, /assets/report-govoss-2025, /organization/ipa-units, /organization/hub-structure, /relationships/inquiry-channel, /traces/org-reform-2026-08-01, /open-questions/coming-soon-menus, /open-questions/kit-releases
+- `volatile` なオブジェクト: /traces/cncf-tag-archived, /sources/ext-open-source-pledge(累計額), /assets/ospo-starter-kit, /assets/report-2025, /assets/report-govoss-2025, /organization/ipa-units, /organization/hub-structure, /relationships/inquiry-channel, /traces/org-reform-2026-08-01, /open-questions/coming-soon-menus, /open-questions/kit-releases
 - 定期の確認: ハブのトップ(お知らせ)とライブラリの更新履歴を、少なくとも月 1 回確かめる。
 
 # /system-record/self-run-log
